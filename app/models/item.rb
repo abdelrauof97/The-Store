@@ -4,8 +4,8 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :carts, through: :line_items
 
-  def available_items
-    Item.where("inventory >= 1")
+  def self.available_items
+    where("inventory >= 1")
   end
 
 end

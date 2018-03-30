@@ -368,3 +368,139 @@ Migrating to AddAttributeToUsers (20180330152439)
   [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 20"], ["category_id", 20], ["updated_at", "2018-03-30 15:40:41.400187"], ["id", 20]]
   [1m[35m (2.7ms)[0m  commit transaction
   [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Aluminum Chair"], ["inventory", "20"], ["price", 4414.0], ["created_at", "2018-03-30 17:22:40.062035"], ["updated_at", "2018-03-30 17:22:40.062035"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Music"], ["created_at", "2018-03-30 17:22:40.124150"], ["updated_at", "2018-03-30 17:22:40.124150"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Silk Wallet"], ["inventory", "30"], ["price", 2720.0], ["created_at", "2018-03-30 17:22:40.131307"], ["updated_at", "2018-03-30 17:22:40.131307"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports, Tools & Kids"], ["created_at", "2018-03-30 17:22:40.137421"], ["updated_at", "2018-03-30 17:22:40.137421"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Rubber Bag"], ["inventory", "26"], ["price", 6604.0], ["created_at", "2018-03-30 17:22:40.143424"], ["updated_at", "2018-03-30 17:22:40.143424"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Jewelery, Outdoors & Electronics"], ["created_at", "2018-03-30 17:22:40.149015"], ["updated_at", "2018-03-30 17:22:40.149015"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Plastic Knife"], ["inventory", "65"], ["price", 8957.0], ["created_at", "2018-03-30 17:22:40.154419"], ["updated_at", "2018-03-30 17:22:40.154419"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Games"], ["created_at", "2018-03-30 17:22:40.160065"], ["updated_at", "2018-03-30 17:22:40.160065"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Enormous Plastic Chair"], ["inventory", "23"], ["price", 4979.0], ["created_at", "2018-03-30 17:22:40.165192"], ["updated_at", "2018-03-30 17:22:40.165192"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby"], ["created_at", "2018-03-30 17:22:40.169885"], ["updated_at", "2018-03-30 17:22:40.169885"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Leather Hat"], ["inventory", "81"], ["price", 9956.0], ["created_at", "2018-03-30 17:22:40.175117"], ["updated_at", "2018-03-30 17:22:40.175117"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Clothing, Shoes & Garden"], ["created_at", "2018-03-30 17:22:40.180330"], ["updated_at", "2018-03-30 17:22:40.180330"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Small Silk Pants"], ["inventory", "95"], ["price", 1859.0], ["created_at", "2018-03-30 17:22:40.186042"], ["updated_at", "2018-03-30 17:22:40.186042"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Industrial"], ["created_at", "2018-03-30 17:22:40.190218"], ["updated_at", "2018-03-30 17:22:40.190218"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Synergistic Silk Pants"], ["inventory", "37"], ["price", 2792.0], ["created_at", "2018-03-30 17:22:40.194513"], ["updated_at", "2018-03-30 17:22:40.194513"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys & Movies"], ["created_at", "2018-03-30 17:22:40.198863"], ["updated_at", "2018-03-30 17:22:40.198863"]]
+  [1m[36m (24.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Small Leather Pants"], ["inventory", "35"], ["price", 9767.0], ["created_at", "2018-03-30 17:22:40.225081"], ["updated_at", "2018-03-30 17:22:40.225081"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive"], ["created_at", "2018-03-30 17:22:40.229453"], ["updated_at", "2018-03-30 17:22:40.229453"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Gorgeous Wooden Chair"], ["inventory", "48"], ["price", 9769.0], ["created_at", "2018-03-30 17:22:40.233663"], ["updated_at", "2018-03-30 17:22:40.233663"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Outdoors & Movies"], ["created_at", "2018-03-30 17:22:40.237987"], ["updated_at", "2018-03-30 17:22:40.237987"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 21"], ["category_id", 21], ["updated_at", "2018-03-30 17:22:40.263026"], ["id", 21]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 22"], ["category_id", 22], ["updated_at", "2018-03-30 17:22:40.272514"], ["id", 22]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 23"], ["category_id", 23], ["updated_at", "2018-03-30 17:22:40.276960"], ["id", 23]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 24"], ["category_id", 24], ["updated_at", "2018-03-30 17:22:40.281043"], ["id", 24]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 25"], ["category_id", 25], ["updated_at", "2018-03-30 17:22:40.285459"], ["id", 25]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (31.2ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 26"], ["category_id", 26], ["updated_at", "2018-03-30 17:22:40.289762"], ["id", 26]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 27"], ["category_id", 27], ["updated_at", "2018-03-30 17:22:40.325966"], ["id", 27]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 28"], ["category_id", 28], ["updated_at", "2018-03-30 17:22:40.330585"], ["id", 28]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 29"], ["category_id", 29], ["updated_at", "2018-03-30 17:22:40.335455"], ["id", 29]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 30"], ["category_id", 30], ["updated_at", "2018-03-30 17:22:40.340570"], ["id", 30]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'john@gmail.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["email", "john@gmail.com"], ["encrypted_password", "$2a$10$sZAHQMyqhzB8AqBXYT0gROqjwemCDkYuCNODsPZH4cg.FfSAKCoK6"], ["created_at", "2018-03-30 17:22:40.640708"], ["updated_at", "2018-03-30 17:22:40.640708"]]
+  [1m[35m (3.7ms)[0m  commit transaction
