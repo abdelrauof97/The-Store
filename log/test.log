@@ -24900,3 +24900,1559 @@
   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.9ms)[0m  DELETE FROM "carts";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'carts';
+  [1m[36m (3.4ms)[0m  [1mDELETE FROM "categories";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'categories';[0m
+  [1m[35m (4.9ms)[0m  DELETE FROM "items";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'items';
+  [1m[36m (4.7ms)[0m  [1mDELETE FROM "line_items";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'line_items';[0m
+  [1m[35m (3.0ms)[0m  DELETE FROM "orders";
+  [1m[36m (0.6ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  DELETE FROM sqlite_sequence where name = 'orders';
+  [1m[36m (5.4ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Fantastic Copper Gloves"], ["inventory", "35"], ["price", 1887.0], ["created_at", "2018-03-30 17:01:16.065975"], ["updated_at", "2018-03-30 17:01:16.065975"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Garden & Industrial"], ["created_at", "2018-03-30 17:01:16.124207"], ["updated_at", "2018-03-30 17:01:16.124207"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Fantastic Marble Clock"], ["inventory", "42"], ["price", 6181.0], ["created_at", "2018-03-30 17:01:16.127833"], ["updated_at", "2018-03-30 17:01:16.127833"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Baby"], ["created_at", "2018-03-30 17:01:16.131089"], ["updated_at", "2018-03-30 17:01:16.131089"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Practical Steel Pants"], ["inventory", "98"], ["price", 3135.0], ["created_at", "2018-03-30 17:01:16.134521"], ["updated_at", "2018-03-30 17:01:16.134521"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Movies, Kids & Toys"], ["created_at", "2018-03-30 17:01:16.138994"], ["updated_at", "2018-03-30 17:01:16.138994"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Gorgeous Rubber Hat"], ["inventory", "71"], ["price", 3747.0], ["created_at", "2018-03-30 17:01:16.142026"], ["updated_at", "2018-03-30 17:01:16.142026"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Books"], ["created_at", "2018-03-30 17:01:16.144998"], ["updated_at", "2018-03-30 17:01:16.144998"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Marble Table"], ["inventory", "35"], ["price", 6880.0], ["created_at", "2018-03-30 17:01:16.148083"], ["updated_at", "2018-03-30 17:01:16.148083"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery & Sports"], ["created_at", "2018-03-30 17:01:16.150844"], ["updated_at", "2018-03-30 17:01:16.150844"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Fantastic Aluminum Bottle"], ["inventory", "36"], ["price", 3258.0], ["created_at", "2018-03-30 17:01:16.153655"], ["updated_at", "2018-03-30 17:01:16.153655"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Shoes & Automotive"], ["created_at", "2018-03-30 17:01:16.156319"], ["updated_at", "2018-03-30 17:01:16.156319"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Paper Shoes"], ["inventory", "29"], ["price", 1589.0], ["created_at", "2018-03-30 17:01:16.159137"], ["updated_at", "2018-03-30 17:01:16.159137"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Health & Electronics"], ["created_at", "2018-03-30 17:01:16.161917"], ["updated_at", "2018-03-30 17:01:16.161917"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Steel Bag"], ["inventory", "85"], ["price", 1772.0], ["created_at", "2018-03-30 17:01:16.164801"], ["updated_at", "2018-03-30 17:01:16.164801"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Outdoors, Baby & Jewelery"], ["created_at", "2018-03-30 17:01:16.167448"], ["updated_at", "2018-03-30 17:01:16.167448"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Durable Granite Coat"], ["inventory", "73"], ["price", 1273.0], ["created_at", "2018-03-30 17:01:16.170237"], ["updated_at", "2018-03-30 17:01:16.170237"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Music, Industrial & Home"], ["created_at", "2018-03-30 17:01:16.173019"], ["updated_at", "2018-03-30 17:01:16.173019"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Leather Gloves"], ["inventory", "65"], ["price", 1961.0], ["created_at", "2018-03-30 17:01:16.224149"], ["updated_at", "2018-03-30 17:01:16.224149"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Garden, Industrial & Automotive"], ["created_at", "2018-03-30 17:01:16.226691"], ["updated_at", "2018-03-30 17:01:16.226691"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:16.230168"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:16.240016"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:16.241873"], ["id", 3]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:16.243624"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:16.245487"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:16.247563"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:16.249606"], ["id", 7]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:16.253499"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:16.255970"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:16.257974"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-03-30 17:01:16.265596"], ["updated_at", "2018-03-30 17:01:16.265596"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:16.356318"], ["updated_at", "2018-03-30 17:01:16.356318"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 2], ["created_at", "2018-03-30 17:01:16.361800"], ["updated_at", "2018-03-30 17:01:16.361800"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Incredible Concrete Bottle"], ["inventory", "13"], ["price", 7365.0], ["created_at", "2018-03-30 17:01:16.426908"], ["updated_at", "2018-03-30 17:01:16.426908"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Home & Tools"], ["created_at", "2018-03-30 17:01:16.431328"], ["updated_at", "2018-03-30 17:01:16.431328"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Gorgeous Bronze Chair"], ["inventory", "29"], ["price", 8784.0], ["created_at", "2018-03-30 17:01:16.433986"], ["updated_at", "2018-03-30 17:01:16.433986"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Books & Electronics"], ["created_at", "2018-03-30 17:01:16.436213"], ["updated_at", "2018-03-30 17:01:16.436213"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Granite Bottle"], ["inventory", "86"], ["price", 6159.0], ["created_at", "2018-03-30 17:01:16.438577"], ["updated_at", "2018-03-30 17:01:16.438577"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Electronics & Industrial"], ["created_at", "2018-03-30 17:01:16.440434"], ["updated_at", "2018-03-30 17:01:16.440434"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Awesome Granite Gloves"], ["inventory", "41"], ["price", 6153.0], ["created_at", "2018-03-30 17:01:16.442640"], ["updated_at", "2018-03-30 17:01:16.442640"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Clothing"], ["created_at", "2018-03-30 17:01:16.444597"], ["updated_at", "2018-03-30 17:01:16.444597"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Granite Shoes"], ["inventory", "36"], ["price", 7431.0], ["created_at", "2018-03-30 17:01:16.446790"], ["updated_at", "2018-03-30 17:01:16.446790"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery"], ["created_at", "2018-03-30 17:01:16.449029"], ["updated_at", "2018-03-30 17:01:16.449029"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Durable Granite Lamp"], ["inventory", "90"], ["price", 8024.0], ["created_at", "2018-03-30 17:01:16.450931"], ["updated_at", "2018-03-30 17:01:16.450931"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Automotive"], ["created_at", "2018-03-30 17:01:16.452720"], ["updated_at", "2018-03-30 17:01:16.452720"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Incredible Granite Wallet"], ["inventory", "29"], ["price", 8313.0], ["created_at", "2018-03-30 17:01:16.454846"], ["updated_at", "2018-03-30 17:01:16.454846"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Baby & Toys"], ["created_at", "2018-03-30 17:01:16.456660"], ["updated_at", "2018-03-30 17:01:16.456660"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Gorgeous Leather Shoes"], ["inventory", "45"], ["price", 8335.0], ["created_at", "2018-03-30 17:01:16.458589"], ["updated_at", "2018-03-30 17:01:16.458589"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Baby & Electronics"], ["created_at", "2018-03-30 17:01:16.460644"], ["updated_at", "2018-03-30 17:01:16.460644"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ergonomic Cotton Keyboard"], ["inventory", "26"], ["price", 9186.0], ["created_at", "2018-03-30 17:01:16.462711"], ["updated_at", "2018-03-30 17:01:16.462711"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Baby, Beauty & Home"], ["created_at", "2018-03-30 17:01:16.464603"], ["updated_at", "2018-03-30 17:01:16.464603"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ergonomic Granite Computer"], ["inventory", "53"], ["price", 6327.0], ["created_at", "2018-03-30 17:01:16.466569"], ["updated_at", "2018-03-30 17:01:16.466569"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Jewelery, Automotive & Toys"], ["created_at", "2018-03-30 17:01:16.468388"], ["updated_at", "2018-03-30 17:01:16.468388"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:16.471239"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:16.473209"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:16.523648"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:16.525575"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:16.527712"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:16.529755"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:16.531786"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:16.534175"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:16.536148"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:16.538439"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-03-30 17:01:16.540726"], ["updated_at", "2018-03-30 17:01:16.540726"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:16.544000"], ["updated_at", "2018-03-30 17:01:16.544000"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLineItem Exists (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."id" = ?[0m  [["cart_id", 1], ["id", 1]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Concrete Watch"], ["inventory", "41"], ["price", 6633.0], ["created_at", "2018-03-30 17:01:16.572605"], ["updated_at", "2018-03-30 17:01:16.572605"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden & Shoes"], ["created_at", "2018-03-30 17:01:16.624161"], ["updated_at", "2018-03-30 17:01:16.624161"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Concrete Table"], ["inventory", "81"], ["price", 7936.0], ["created_at", "2018-03-30 17:01:16.626735"], ["updated_at", "2018-03-30 17:01:16.626735"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Computers"], ["created_at", "2018-03-30 17:01:16.628800"], ["updated_at", "2018-03-30 17:01:16.628800"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Aluminum Keyboard"], ["inventory", "97"], ["price", 6913.0], ["created_at", "2018-03-30 17:01:16.630884"], ["updated_at", "2018-03-30 17:01:16.630884"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books"], ["created_at", "2018-03-30 17:01:16.632826"], ["updated_at", "2018-03-30 17:01:16.632826"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Concrete Hat"], ["inventory", "39"], ["price", 7398.0], ["created_at", "2018-03-30 17:01:16.634944"], ["updated_at", "2018-03-30 17:01:16.634944"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Games"], ["created_at", "2018-03-30 17:01:16.636891"], ["updated_at", "2018-03-30 17:01:16.636891"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Plastic Shirt"], ["inventory", "44"], ["price", 7671.0], ["created_at", "2018-03-30 17:01:16.638978"], ["updated_at", "2018-03-30 17:01:16.638978"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Outdoors, Computers & Movies"], ["created_at", "2018-03-30 17:01:16.640978"], ["updated_at", "2018-03-30 17:01:16.640978"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Steel Knife"], ["inventory", "50"], ["price", 9483.0], ["created_at", "2018-03-30 17:01:16.643324"], ["updated_at", "2018-03-30 17:01:16.643324"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Industrial, Music & Jewelery"], ["created_at", "2018-03-30 17:01:16.645365"], ["updated_at", "2018-03-30 17:01:16.645365"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Synergistic Silk Hat"], ["inventory", "56"], ["price", 4311.0], ["created_at", "2018-03-30 17:01:16.647771"], ["updated_at", "2018-03-30 17:01:16.647771"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive"], ["created_at", "2018-03-30 17:01:16.649784"], ["updated_at", "2018-03-30 17:01:16.649784"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Concrete Bottle"], ["inventory", "75"], ["price", 3377.0], ["created_at", "2018-03-30 17:01:16.652076"], ["updated_at", "2018-03-30 17:01:16.652076"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports, Grocery & Home"], ["created_at", "2018-03-30 17:01:16.654102"], ["updated_at", "2018-03-30 17:01:16.654102"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Linen Wallet"], ["inventory", "24"], ["price", 8337.0], ["created_at", "2018-03-30 17:01:16.656309"], ["updated_at", "2018-03-30 17:01:16.656309"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys, Jewelery & Electronics"], ["created_at", "2018-03-30 17:01:16.658409"], ["updated_at", "2018-03-30 17:01:16.658409"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Bronze Keyboard"], ["inventory", "13"], ["price", 2783.0], ["created_at", "2018-03-30 17:01:16.660446"], ["updated_at", "2018-03-30 17:01:16.660446"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby & Music"], ["created_at", "2018-03-30 17:01:16.662783"], ["updated_at", "2018-03-30 17:01:16.662783"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:16.665509"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:16.667692"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:16.669944"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:16.671897"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:16.722029"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:16.724337"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:16.726396"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:16.728356"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:16.730652"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:16.732750"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-03-30 17:01:16.735319"], ["updated_at", "2018-03-30 17:01:16.735319"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:16.738293"], ["updated_at", "2018-03-30 17:01:16.738293"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Exists (0.2ms)[0m  SELECT "items".* FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = ? AND "items"."id" = ?  [["cart_id", 1], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Mediocre Bronze Hat"], ["inventory", "56"], ["price", 8996.0], ["created_at", "2018-03-30 17:01:16.757341"], ["updated_at", "2018-03-30 17:01:16.757341"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Shoes"], ["created_at", "2018-03-30 17:01:16.760775"], ["updated_at", "2018-03-30 17:01:16.760775"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Awesome Concrete Coat"], ["inventory", "12"], ["price", 3008.0], ["created_at", "2018-03-30 17:01:16.763047"], ["updated_at", "2018-03-30 17:01:16.763047"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Music"], ["created_at", "2018-03-30 17:01:16.765060"], ["updated_at", "2018-03-30 17:01:16.765060"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Small Steel Keyboard"], ["inventory", "69"], ["price", 7369.0], ["created_at", "2018-03-30 17:01:16.767512"], ["updated_at", "2018-03-30 17:01:16.767512"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery & Toys"], ["created_at", "2018-03-30 17:01:16.769585"], ["updated_at", "2018-03-30 17:01:16.769585"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Small Silk Computer"], ["inventory", "75"], ["price", 5191.0], ["created_at", "2018-03-30 17:01:16.771911"], ["updated_at", "2018-03-30 17:01:16.771911"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Clothing"], ["created_at", "2018-03-30 17:01:16.822135"], ["updated_at", "2018-03-30 17:01:16.822135"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Lightweight Wool Watch"], ["inventory", "54"], ["price", 7310.0], ["created_at", "2018-03-30 17:01:16.824328"], ["updated_at", "2018-03-30 17:01:16.824328"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Toys, Clothing & Games"], ["created_at", "2018-03-30 17:01:16.826794"], ["updated_at", "2018-03-30 17:01:16.826794"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Incredible Wool Bench"], ["inventory", "63"], ["price", 9679.0], ["created_at", "2018-03-30 17:01:16.828891"], ["updated_at", "2018-03-30 17:01:16.828891"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Home & Clothing"], ["created_at", "2018-03-30 17:01:16.831258"], ["updated_at", "2018-03-30 17:01:16.831258"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Awesome Concrete Shirt"], ["inventory", "99"], ["price", 5377.0], ["created_at", "2018-03-30 17:01:16.833347"], ["updated_at", "2018-03-30 17:01:16.833347"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Health & Automotive"], ["created_at", "2018-03-30 17:01:16.835281"], ["updated_at", "2018-03-30 17:01:16.835281"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Lightweight Plastic Bottle"], ["inventory", "96"], ["price", 4964.0], ["created_at", "2018-03-30 17:01:16.837569"], ["updated_at", "2018-03-30 17:01:16.837569"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Outdoors"], ["created_at", "2018-03-30 17:01:16.839581"], ["updated_at", "2018-03-30 17:01:16.839581"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Incredible Rubber Pants"], ["inventory", "46"], ["price", 4335.0], ["created_at", "2018-03-30 17:01:16.843251"], ["updated_at", "2018-03-30 17:01:16.843251"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Games & Clothing"], ["created_at", "2018-03-30 17:01:16.846040"], ["updated_at", "2018-03-30 17:01:16.846040"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Practical Iron Coat"], ["inventory", "76"], ["price", 2220.0], ["created_at", "2018-03-30 17:01:16.848655"], ["updated_at", "2018-03-30 17:01:16.848655"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Beauty"], ["created_at", "2018-03-30 17:01:16.850773"], ["updated_at", "2018-03-30 17:01:16.850773"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:16.853691"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:16.855829"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:16.857889"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:16.860072"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:16.862113"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:16.864334"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:16.866951"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:16.869098"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (48.3ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:16.872303"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:16.923058"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-03-30 17:01:16.926253"], ["updated_at", "2018-03-30 17:01:16.926253"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:16.931492"], ["updated_at", "2018-03-30 17:01:16.931492"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Lightweight Cotton Shirt"], ["inventory", "67"], ["price", 5414.0], ["created_at", "2018-03-30 17:01:16.967843"], ["updated_at", "2018-03-30 17:01:16.967843"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Computers, Jewelery & Toys"], ["created_at", "2018-03-30 17:01:17.022984"], ["updated_at", "2018-03-30 17:01:17.022984"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Wool Keyboard"], ["inventory", "68"], ["price", 6258.0], ["created_at", "2018-03-30 17:01:17.025615"], ["updated_at", "2018-03-30 17:01:17.025615"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Home, Sports & Beauty"], ["created_at", "2018-03-30 17:01:17.027923"], ["updated_at", "2018-03-30 17:01:17.027923"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Practical Copper Wallet"], ["inventory", "88"], ["price", 6878.0], ["created_at", "2018-03-30 17:01:17.030337"], ["updated_at", "2018-03-30 17:01:17.030337"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Computers, Games & Music"], ["created_at", "2018-03-30 17:01:17.032411"], ["updated_at", "2018-03-30 17:01:17.032411"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Sleek Steel Plate"], ["inventory", "37"], ["price", 2269.0], ["created_at", "2018-03-30 17:01:17.034580"], ["updated_at", "2018-03-30 17:01:17.034580"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Jewelery"], ["created_at", "2018-03-30 17:01:17.036561"], ["updated_at", "2018-03-30 17:01:17.036561"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Practical Leather Lamp"], ["inventory", "92"], ["price", 8184.0], ["created_at", "2018-03-30 17:01:17.039384"], ["updated_at", "2018-03-30 17:01:17.039384"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Tools, Shoes & Beauty"], ["created_at", "2018-03-30 17:01:17.041200"], ["updated_at", "2018-03-30 17:01:17.041200"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Copper Coat"], ["inventory", "17"], ["price", 8739.0], ["created_at", "2018-03-30 17:01:17.043114"], ["updated_at", "2018-03-30 17:01:17.043114"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Baby"], ["created_at", "2018-03-30 17:01:17.044849"], ["updated_at", "2018-03-30 17:01:17.044849"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Fantastic Plastic Clock"], ["inventory", "22"], ["price", 5005.0], ["created_at", "2018-03-30 17:01:17.046850"], ["updated_at", "2018-03-30 17:01:17.046850"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Shoes, Toys & Kids"], ["created_at", "2018-03-30 17:01:17.048662"], ["updated_at", "2018-03-30 17:01:17.048662"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Durable Plastic Chair"], ["inventory", "56"], ["price", 4318.0], ["created_at", "2018-03-30 17:01:17.050829"], ["updated_at", "2018-03-30 17:01:17.050829"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Movies"], ["created_at", "2018-03-30 17:01:17.052621"], ["updated_at", "2018-03-30 17:01:17.052621"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Small Leather Hat"], ["inventory", "40"], ["price", 3092.0], ["created_at", "2018-03-30 17:01:17.054544"], ["updated_at", "2018-03-30 17:01:17.054544"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Health"], ["created_at", "2018-03-30 17:01:17.056285"], ["updated_at", "2018-03-30 17:01:17.056285"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Aerodynamic Leather Hat"], ["inventory", "17"], ["price", 5060.0], ["created_at", "2018-03-30 17:01:17.058211"], ["updated_at", "2018-03-30 17:01:17.058211"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Books, Computers & Grocery"], ["created_at", "2018-03-30 17:01:17.060130"], ["updated_at", "2018-03-30 17:01:17.060130"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.062632"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.064566"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.066399"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.068252"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.070148"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.071966"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.121851"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.123653"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.125687"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.128552"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-03-30 17:01:17.131804"], ["updated_at", "2018-03-30 17:01:17.131804"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:17.136179"], ["updated_at", "2018-03-30 17:01:17.136179"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Lightweight Concrete Bag"], ["inventory", "86"], ["price", 5919.0], ["created_at", "2018-03-30 17:01:17.146604"], ["updated_at", "2018-03-30 17:01:17.146604"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Movies & Tools"], ["created_at", "2018-03-30 17:01:17.150261"], ["updated_at", "2018-03-30 17:01:17.150261"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Cotton Plate"], ["inventory", "52"], ["price", 3270.0], ["created_at", "2018-03-30 17:01:17.153027"], ["updated_at", "2018-03-30 17:01:17.153027"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Outdoors & Games"], ["created_at", "2018-03-30 17:01:17.155012"], ["updated_at", "2018-03-30 17:01:17.155012"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ergonomic Marble Gloves"], ["inventory", "47"], ["price", 1368.0], ["created_at", "2018-03-30 17:01:17.156921"], ["updated_at", "2018-03-30 17:01:17.156921"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Garden"], ["created_at", "2018-03-30 17:01:17.158837"], ["updated_at", "2018-03-30 17:01:17.158837"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Gorgeous Wool Knife"], ["inventory", "89"], ["price", 7197.0], ["created_at", "2018-03-30 17:01:17.160648"], ["updated_at", "2018-03-30 17:01:17.160648"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Home"], ["created_at", "2018-03-30 17:01:17.162468"], ["updated_at", "2018-03-30 17:01:17.162468"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Silk Car"], ["inventory", "40"], ["price", 3815.0], ["created_at", "2018-03-30 17:01:17.164430"], ["updated_at", "2018-03-30 17:01:17.164430"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Industrial & Toys"], ["created_at", "2018-03-30 17:01:17.166462"], ["updated_at", "2018-03-30 17:01:17.166462"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Rubber Lamp"], ["inventory", "28"], ["price", 1311.0], ["created_at", "2018-03-30 17:01:17.168377"], ["updated_at", "2018-03-30 17:01:17.168377"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Industrial, Jewelery & Home"], ["created_at", "2018-03-30 17:01:17.170305"], ["updated_at", "2018-03-30 17:01:17.170305"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Enormous Plastic Watch"], ["inventory", "77"], ["price", 8361.0], ["created_at", "2018-03-30 17:01:17.172085"], ["updated_at", "2018-03-30 17:01:17.172085"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Home"], ["created_at", "2018-03-30 17:01:17.222153"], ["updated_at", "2018-03-30 17:01:17.222153"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Iron Knife"], ["inventory", "28"], ["price", 7229.0], ["created_at", "2018-03-30 17:01:17.224507"], ["updated_at", "2018-03-30 17:01:17.224507"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Electronics"], ["created_at", "2018-03-30 17:01:17.226730"], ["updated_at", "2018-03-30 17:01:17.226730"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Mediocre Granite Computer"], ["inventory", "11"], ["price", 6822.0], ["created_at", "2018-03-30 17:01:17.229068"], ["updated_at", "2018-03-30 17:01:17.229068"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Electronics"], ["created_at", "2018-03-30 17:01:17.231192"], ["updated_at", "2018-03-30 17:01:17.231192"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ergonomic Linen Car"], ["inventory", "84"], ["price", 4903.0], ["created_at", "2018-03-30 17:01:17.233461"], ["updated_at", "2018-03-30 17:01:17.233461"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Kids"], ["created_at", "2018-03-30 17:01:17.235245"], ["updated_at", "2018-03-30 17:01:17.235245"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.237773"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.239669"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.241679"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.243430"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.245275"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.247185"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.249003"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.250816"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.252604"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.254433"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2018-03-30 17:01:17.256510"], ["updated_at", "2018-03-30 17:01:17.256510"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:17.259312"], ["updated_at", "2018-03-30 17:01:17.259312"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Granite Shoes"], ["inventory", "85"], ["price", 1899.0], ["created_at", "2018-03-30 17:01:17.267939"], ["updated_at", "2018-03-30 17:01:17.267939"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home"], ["created_at", "2018-03-30 17:01:17.321506"], ["updated_at", "2018-03-30 17:01:17.321506"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Iron Bottle"], ["inventory", "60"], ["price", 2624.0], ["created_at", "2018-03-30 17:01:17.324399"], ["updated_at", "2018-03-30 17:01:17.324399"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports, Music & Clothing"], ["created_at", "2018-03-30 17:01:17.326561"], ["updated_at", "2018-03-30 17:01:17.326561"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Leather Lamp"], ["inventory", "69"], ["price", 5531.0], ["created_at", "2018-03-30 17:01:17.328643"], ["updated_at", "2018-03-30 17:01:17.328643"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Jewelery & Computers"], ["created_at", "2018-03-30 17:01:17.330723"], ["updated_at", "2018-03-30 17:01:17.330723"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Silk Plate"], ["inventory", "52"], ["price", 4000.0], ["created_at", "2018-03-30 17:01:17.332840"], ["updated_at", "2018-03-30 17:01:17.332840"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Health"], ["created_at", "2018-03-30 17:01:17.334848"], ["updated_at", "2018-03-30 17:01:17.334848"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Intelligent Plastic Pants"], ["inventory", "99"], ["price", 6634.0], ["created_at", "2018-03-30 17:01:17.336927"], ["updated_at", "2018-03-30 17:01:17.336927"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive"], ["created_at", "2018-03-30 17:01:17.338906"], ["updated_at", "2018-03-30 17:01:17.338906"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Practical Steel Pants"], ["inventory", "80"], ["price", 7211.0], ["created_at", "2018-03-30 17:01:17.340880"], ["updated_at", "2018-03-30 17:01:17.340880"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home, Clothing & Beauty"], ["created_at", "2018-03-30 17:01:17.343039"], ["updated_at", "2018-03-30 17:01:17.343039"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rustic Copper Table"], ["inventory", "76"], ["price", 8585.0], ["created_at", "2018-03-30 17:01:17.345075"], ["updated_at", "2018-03-30 17:01:17.345075"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports"], ["created_at", "2018-03-30 17:01:17.347085"], ["updated_at", "2018-03-30 17:01:17.347085"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Granite Chair"], ["inventory", "44"], ["price", 7997.0], ["created_at", "2018-03-30 17:01:17.349187"], ["updated_at", "2018-03-30 17:01:17.349187"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Shoes & Computers"], ["created_at", "2018-03-30 17:01:17.351337"], ["updated_at", "2018-03-30 17:01:17.351337"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lightweight Granite Clock"], ["inventory", "61"], ["price", 5623.0], ["created_at", "2018-03-30 17:01:17.353597"], ["updated_at", "2018-03-30 17:01:17.353597"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Grocery, Sports & Beauty"], ["created_at", "2018-03-30 17:01:17.355600"], ["updated_at", "2018-03-30 17:01:17.355600"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Small Aluminum Hat"], ["inventory", "81"], ["price", 3447.0], ["created_at", "2018-03-30 17:01:17.357803"], ["updated_at", "2018-03-30 17:01:17.357803"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Industrial & Clothing"], ["created_at", "2018-03-30 17:01:17.359924"], ["updated_at", "2018-03-30 17:01:17.359924"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.362673"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.364780"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.366779"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.368911"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.371147"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (48.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.421645"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.423547"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.425429"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.427387"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.429307"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mItem Exists (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."category_id" = ? AND "items"."id" = ?[0m  [["category_id", 1], ["id", 1]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Cotton Wallet"], ["inventory", "82"], ["price", 1427.0], ["created_at", "2018-03-30 17:01:17.443349"], ["updated_at", "2018-03-30 17:01:17.443349"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports, Music & Industrial"], ["created_at", "2018-03-30 17:01:17.446967"], ["updated_at", "2018-03-30 17:01:17.446967"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Marble Shirt"], ["inventory", "63"], ["price", 4248.0], ["created_at", "2018-03-30 17:01:17.449780"], ["updated_at", "2018-03-30 17:01:17.449780"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Jewelery"], ["created_at", "2018-03-30 17:01:17.452190"], ["updated_at", "2018-03-30 17:01:17.452190"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Gorgeous Rubber Plate"], ["inventory", "94"], ["price", 5819.0], ["created_at", "2018-03-30 17:01:17.454782"], ["updated_at", "2018-03-30 17:01:17.454782"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home, Industrial & Electronics"], ["created_at", "2018-03-30 17:01:17.457193"], ["updated_at", "2018-03-30 17:01:17.457193"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Intelligent Silk Coat"], ["inventory", "90"], ["price", 2352.0], ["created_at", "2018-03-30 17:01:17.459534"], ["updated_at", "2018-03-30 17:01:17.459534"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home & Books"], ["created_at", "2018-03-30 17:01:17.461910"], ["updated_at", "2018-03-30 17:01:17.461910"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Wooden Shoes"], ["inventory", "36"], ["price", 9689.0], ["created_at", "2018-03-30 17:01:17.464221"], ["updated_at", "2018-03-30 17:01:17.464221"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Health"], ["created_at", "2018-03-30 17:01:17.466480"], ["updated_at", "2018-03-30 17:01:17.466480"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lightweight Plastic Lamp"], ["inventory", "97"], ["price", 9671.0], ["created_at", "2018-03-30 17:01:17.468799"], ["updated_at", "2018-03-30 17:01:17.468799"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Beauty"], ["created_at", "2018-03-30 17:01:17.471112"], ["updated_at", "2018-03-30 17:01:17.471112"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lightweight Paper Coat"], ["inventory", "75"], ["price", 8449.0], ["created_at", "2018-03-30 17:01:17.521523"], ["updated_at", "2018-03-30 17:01:17.521523"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Beauty, Computers & Kids"], ["created_at", "2018-03-30 17:01:17.523878"], ["updated_at", "2018-03-30 17:01:17.523878"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Wooden Chair"], ["inventory", "49"], ["price", 5950.0], ["created_at", "2018-03-30 17:01:17.525873"], ["updated_at", "2018-03-30 17:01:17.525873"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Tools & Movies"], ["created_at", "2018-03-30 17:01:17.527794"], ["updated_at", "2018-03-30 17:01:17.527794"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Marble Computer"], ["inventory", "58"], ["price", 2194.0], ["created_at", "2018-03-30 17:01:17.529803"], ["updated_at", "2018-03-30 17:01:17.529803"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books & Kids"], ["created_at", "2018-03-30 17:01:17.531707"], ["updated_at", "2018-03-30 17:01:17.531707"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Bronze Gloves"], ["inventory", "90"], ["price", 5188.0], ["created_at", "2018-03-30 17:01:17.533574"], ["updated_at", "2018-03-30 17:01:17.533574"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Beauty"], ["created_at", "2018-03-30 17:01:17.535310"], ["updated_at", "2018-03-30 17:01:17.535310"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.537771"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.539658"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.541484"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.543235"], ["id", 4]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.545787"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.547539"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.549380"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.551130"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.552924"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.554720"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Aluminum Bag"], ["inventory", "62"], ["price", 1455.0], ["created_at", "2018-03-30 17:01:17.565797"], ["updated_at", "2018-03-30 17:01:17.565797"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Kids, Garden & Sports"], ["created_at", "2018-03-30 17:01:17.567989"], ["updated_at", "2018-03-30 17:01:17.567989"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Intelligent Marble Table"], ["inventory", "58"], ["price", 1726.0], ["created_at", "2018-03-30 17:01:17.622792"], ["updated_at", "2018-03-30 17:01:17.622792"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Jewelery, Industrial & Garden"], ["created_at", "2018-03-30 17:01:17.625095"], ["updated_at", "2018-03-30 17:01:17.625095"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Wool Computer"], ["inventory", "52"], ["price", 3642.0], ["created_at", "2018-03-30 17:01:17.628203"], ["updated_at", "2018-03-30 17:01:17.628203"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden & Automotive"], ["created_at", "2018-03-30 17:01:17.630667"], ["updated_at", "2018-03-30 17:01:17.630667"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Linen Computer"], ["inventory", "83"], ["price", 4291.0], ["created_at", "2018-03-30 17:01:17.632842"], ["updated_at", "2018-03-30 17:01:17.632842"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Electronics, Clothing & Tools"], ["created_at", "2018-03-30 17:01:17.635089"], ["updated_at", "2018-03-30 17:01:17.635089"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Marble Hat"], ["inventory", "29"], ["price", 5611.0], ["created_at", "2018-03-30 17:01:17.637364"], ["updated_at", "2018-03-30 17:01:17.637364"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Shoes & Games"], ["created_at", "2018-03-30 17:01:17.639497"], ["updated_at", "2018-03-30 17:01:17.639497"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Plastic Gloves"], ["inventory", "62"], ["price", 3816.0], ["created_at", "2018-03-30 17:01:17.641633"], ["updated_at", "2018-03-30 17:01:17.641633"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden, Books & Baby"], ["created_at", "2018-03-30 17:01:17.643663"], ["updated_at", "2018-03-30 17:01:17.643663"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Paper Watch"], ["inventory", "35"], ["price", 2962.0], ["created_at", "2018-03-30 17:01:17.645822"], ["updated_at", "2018-03-30 17:01:17.645822"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys & Books"], ["created_at", "2018-03-30 17:01:17.647861"], ["updated_at", "2018-03-30 17:01:17.647861"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Bronze Gloves"], ["inventory", "88"], ["price", 4429.0], ["created_at", "2018-03-30 17:01:17.649965"], ["updated_at", "2018-03-30 17:01:17.649965"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Beauty & Sports"], ["created_at", "2018-03-30 17:01:17.651720"], ["updated_at", "2018-03-30 17:01:17.651720"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Plastic Lamp"], ["inventory", "71"], ["price", 5513.0], ["created_at", "2018-03-30 17:01:17.653605"], ["updated_at", "2018-03-30 17:01:17.653605"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby & Home"], ["created_at", "2018-03-30 17:01:17.655380"], ["updated_at", "2018-03-30 17:01:17.655380"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Granite Plate"], ["inventory", "90"], ["price", 4232.0], ["created_at", "2018-03-30 17:01:17.657242"], ["updated_at", "2018-03-30 17:01:17.657242"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden, Home & Games"], ["created_at", "2018-03-30 17:01:17.659064"], ["updated_at", "2018-03-30 17:01:17.659064"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.661526"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.663444"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.665260"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.667033"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.668796"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.670636"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.672473"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.722817"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.724810"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.727500"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-03-30 17:01:17.734904"], ["updated_at", "2018-03-30 17:01:17.734904"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:17.739153"], ["updated_at", "2018-03-30 17:01:17.739153"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."item_id" = ?  ORDER BY "line_items"."id" ASC LIMIT 1  [["item_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Iron Watch"], ["inventory", "12"], ["price", 9489.0], ["created_at", "2018-03-30 17:01:17.751000"], ["updated_at", "2018-03-30 17:01:17.751000"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery"], ["created_at", "2018-03-30 17:01:17.755533"], ["updated_at", "2018-03-30 17:01:17.755533"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Durable Iron Wallet"], ["inventory", "12"], ["price", 8982.0], ["created_at", "2018-03-30 17:01:17.759289"], ["updated_at", "2018-03-30 17:01:17.759289"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery & Industrial"], ["created_at", "2018-03-30 17:01:17.761992"], ["updated_at", "2018-03-30 17:01:17.761992"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Marble Chair"], ["inventory", "77"], ["price", 1579.0], ["created_at", "2018-03-30 17:01:17.764684"], ["updated_at", "2018-03-30 17:01:17.764684"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Jewelery"], ["created_at", "2018-03-30 17:01:17.767136"], ["updated_at", "2018-03-30 17:01:17.767136"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Rubber Bottle"], ["inventory", "36"], ["price", 4234.0], ["created_at", "2018-03-30 17:01:17.769664"], ["updated_at", "2018-03-30 17:01:17.769664"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Grocery & Books"], ["created_at", "2018-03-30 17:01:17.771985"], ["updated_at", "2018-03-30 17:01:17.771985"]]
+  [1m[35m (48.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Intelligent Wooden Car"], ["inventory", "33"], ["price", 9492.0], ["created_at", "2018-03-30 17:01:17.822807"], ["updated_at", "2018-03-30 17:01:17.822807"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Music"], ["created_at", "2018-03-30 17:01:17.825164"], ["updated_at", "2018-03-30 17:01:17.825164"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Ergonomic Concrete Shoes"], ["inventory", "96"], ["price", 4477.0], ["created_at", "2018-03-30 17:01:17.827093"], ["updated_at", "2018-03-30 17:01:17.827093"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Music & Home"], ["created_at", "2018-03-30 17:01:17.828835"], ["updated_at", "2018-03-30 17:01:17.828835"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Small Linen Bench"], ["inventory", "70"], ["price", 7924.0], ["created_at", "2018-03-30 17:01:17.830742"], ["updated_at", "2018-03-30 17:01:17.830742"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Kids"], ["created_at", "2018-03-30 17:01:17.832507"], ["updated_at", "2018-03-30 17:01:17.832507"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Rustic Marble Chair"], ["inventory", "52"], ["price", 1314.0], ["created_at", "2018-03-30 17:01:17.834410"], ["updated_at", "2018-03-30 17:01:17.834410"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Shoes, Beauty & Sports"], ["created_at", "2018-03-30 17:01:17.836234"], ["updated_at", "2018-03-30 17:01:17.836234"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Heavy Duty Granite Lamp"], ["inventory", "75"], ["price", 9532.0], ["created_at", "2018-03-30 17:01:17.838133"], ["updated_at", "2018-03-30 17:01:17.838133"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Games"], ["created_at", "2018-03-30 17:01:17.839892"], ["updated_at", "2018-03-30 17:01:17.839892"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Synergistic Concrete Car"], ["inventory", "71"], ["price", 3079.0], ["created_at", "2018-03-30 17:01:17.841825"], ["updated_at", "2018-03-30 17:01:17.841825"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Jewelery & Music"], ["created_at", "2018-03-30 17:01:17.843653"], ["updated_at", "2018-03-30 17:01:17.843653"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:17.846174"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:17.848116"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:17.849986"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:17.851784"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:17.853605"], ["id", 5]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:17.855442"], ["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:17.857236"], ["id", 7]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:17.859038"], ["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:17.860781"], ["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:17.862623"], ["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "inventory" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["inventory", "0"], ["updated_at", "2018-03-30 17:01:17.867431"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (52.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Synergistic Cotton Car"], ["inventory", "73"], ["price", 3155.0], ["created_at", "2018-03-30 17:01:17.928891"], ["updated_at", "2018-03-30 17:01:17.928891"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Grocery & Garden"], ["created_at", "2018-03-30 17:01:17.934168"], ["updated_at", "2018-03-30 17:01:17.934168"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Linen Table"], ["inventory", "43"], ["price", 5050.0], ["created_at", "2018-03-30 17:01:17.937767"], ["updated_at", "2018-03-30 17:01:17.937767"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Kids & Grocery"], ["created_at", "2018-03-30 17:01:17.940246"], ["updated_at", "2018-03-30 17:01:17.940246"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Cotton Table"], ["inventory", "46"], ["price", 3376.0], ["created_at", "2018-03-30 17:01:17.942948"], ["updated_at", "2018-03-30 17:01:17.942948"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys"], ["created_at", "2018-03-30 17:01:17.945353"], ["updated_at", "2018-03-30 17:01:17.945353"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Silk Car"], ["inventory", "21"], ["price", 3877.0], ["created_at", "2018-03-30 17:01:17.947871"], ["updated_at", "2018-03-30 17:01:17.947871"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Clothing, Computers & Beauty"], ["created_at", "2018-03-30 17:01:17.950307"], ["updated_at", "2018-03-30 17:01:17.950307"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Silk Hat"], ["inventory", "46"], ["price", 6879.0], ["created_at", "2018-03-30 17:01:17.952624"], ["updated_at", "2018-03-30 17:01:17.952624"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive, Home & Toys"], ["created_at", "2018-03-30 17:01:17.954970"], ["updated_at", "2018-03-30 17:01:17.954970"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Wooden Wallet"], ["inventory", "17"], ["price", 9169.0], ["created_at", "2018-03-30 17:01:17.957386"], ["updated_at", "2018-03-30 17:01:17.957386"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Health & Movies"], ["created_at", "2018-03-30 17:01:17.959721"], ["updated_at", "2018-03-30 17:01:17.959721"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Steel Wallet"], ["inventory", "60"], ["price", 3887.0], ["created_at", "2018-03-30 17:01:17.962043"], ["updated_at", "2018-03-30 17:01:17.962043"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Industrial & Garden"], ["created_at", "2018-03-30 17:01:17.964197"], ["updated_at", "2018-03-30 17:01:17.964197"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Cotton Gloves"], ["inventory", "49"], ["price", 8672.0], ["created_at", "2018-03-30 17:01:17.966453"], ["updated_at", "2018-03-30 17:01:17.966453"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books, Automotive & Toys"], ["created_at", "2018-03-30 17:01:17.968647"], ["updated_at", "2018-03-30 17:01:17.968647"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Bronze Car"], ["inventory", "88"], ["price", 6065.0], ["created_at", "2018-03-30 17:01:17.971130"], ["updated_at", "2018-03-30 17:01:17.971130"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Movies & Toys"], ["created_at", "2018-03-30 17:01:18.021616"], ["updated_at", "2018-03-30 17:01:18.021616"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Linen Bag"], ["inventory", "28"], ["price", 9727.0], ["created_at", "2018-03-30 17:01:18.024017"], ["updated_at", "2018-03-30 17:01:18.024017"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Sports & Beauty"], ["created_at", "2018-03-30 17:01:18.025932"], ["updated_at", "2018-03-30 17:01:18.025932"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:18.028499"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:18.030619"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:18.032452"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:18.034332"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:18.036146"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:18.038026"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:18.039880"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:18.041711"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:18.043512"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:18.045341"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-03-30 17:01:18.047399"], ["updated_at", "2018-03-30 17:01:18.047399"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:18.050320"], ["updated_at", "2018-03-30 17:01:18.050320"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Aluminum Bench"], ["inventory", "90"], ["price", 6312.0], ["created_at", "2018-03-30 17:01:18.057016"], ["updated_at", "2018-03-30 17:01:18.057016"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Kids & Health"], ["created_at", "2018-03-30 17:01:18.060048"], ["updated_at", "2018-03-30 17:01:18.060048"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Copper Car"], ["inventory", "39"], ["price", 2825.0], ["created_at", "2018-03-30 17:01:18.063264"], ["updated_at", "2018-03-30 17:01:18.063264"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys & Jewelery"], ["created_at", "2018-03-30 17:01:18.065359"], ["updated_at", "2018-03-30 17:01:18.065359"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rustic Wooden Gloves"], ["inventory", "10"], ["price", 3792.0], ["created_at", "2018-03-30 17:01:18.067474"], ["updated_at", "2018-03-30 17:01:18.067474"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Kids"], ["created_at", "2018-03-30 17:01:18.069354"], ["updated_at", "2018-03-30 17:01:18.069354"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Aluminum Gloves"], ["inventory", "21"], ["price", 9612.0], ["created_at", "2018-03-30 17:01:18.071284"], ["updated_at", "2018-03-30 17:01:18.071284"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Grocery & Garden"], ["created_at", "2018-03-30 17:01:18.073219"], ["updated_at", "2018-03-30 17:01:18.073219"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Small Plastic Bottle"], ["inventory", "97"], ["price", 4089.0], ["created_at", "2018-03-30 17:01:18.123385"], ["updated_at", "2018-03-30 17:01:18.123385"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books & Kids"], ["created_at", "2018-03-30 17:01:18.125350"], ["updated_at", "2018-03-30 17:01:18.125350"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Concrete Car"], ["inventory", "55"], ["price", 2760.0], ["created_at", "2018-03-30 17:01:18.127563"], ["updated_at", "2018-03-30 17:01:18.127563"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Jewelery, Sports & Automotive"], ["created_at", "2018-03-30 17:01:18.129470"], ["updated_at", "2018-03-30 17:01:18.129470"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Silk Plate"], ["inventory", "57"], ["price", 3720.0], ["created_at", "2018-03-30 17:01:18.131377"], ["updated_at", "2018-03-30 17:01:18.131377"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Computers"], ["created_at", "2018-03-30 17:01:18.133192"], ["updated_at", "2018-03-30 17:01:18.133192"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Wool Table"], ["inventory", "53"], ["price", 6428.0], ["created_at", "2018-03-30 17:01:18.135119"], ["updated_at", "2018-03-30 17:01:18.135119"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive & Baby"], ["created_at", "2018-03-30 17:01:18.137077"], ["updated_at", "2018-03-30 17:01:18.137077"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lightweight Steel Table"], ["inventory", "80"], ["price", 8144.0], ["created_at", "2018-03-30 17:01:18.139044"], ["updated_at", "2018-03-30 17:01:18.139044"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home"], ["created_at", "2018-03-30 17:01:18.140946"], ["updated_at", "2018-03-30 17:01:18.140946"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rustic Silk Car"], ["inventory", "95"], ["price", 2911.0], ["created_at", "2018-03-30 17:01:18.143065"], ["updated_at", "2018-03-30 17:01:18.143065"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden, Beauty & Games"], ["created_at", "2018-03-30 17:01:18.150776"], ["updated_at", "2018-03-30 17:01:18.150776"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:18.153259"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:18.155045"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:18.156831"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:18.158728"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:18.160624"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:18.162576"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:18.164467"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:18.166281"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:18.168101"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:18.222080"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-03-30 17:01:18.224248"], ["updated_at", "2018-03-30 17:01:18.224248"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:18.227968"], ["updated_at", "2018-03-30 17:01:18.227968"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Lightweight Linen Shirt"], ["inventory", "62"], ["price", 8355.0], ["created_at", "2018-03-30 17:01:18.238120"], ["updated_at", "2018-03-30 17:01:18.238120"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Beauty, Outdoors & Kids"], ["created_at", "2018-03-30 17:01:18.243335"], ["updated_at", "2018-03-30 17:01:18.243335"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Silk Shoes"], ["inventory", "22"], ["price", 2572.0], ["created_at", "2018-03-30 17:01:18.247107"], ["updated_at", "2018-03-30 17:01:18.247107"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Movies"], ["created_at", "2018-03-30 17:01:18.249923"], ["updated_at", "2018-03-30 17:01:18.249923"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Concrete Clock"], ["inventory", "30"], ["price", 9748.0], ["created_at", "2018-03-30 17:01:18.252487"], ["updated_at", "2018-03-30 17:01:18.252487"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Computers"], ["created_at", "2018-03-30 17:01:18.255047"], ["updated_at", "2018-03-30 17:01:18.255047"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Linen Watch"], ["inventory", "78"], ["price", 7224.0], ["created_at", "2018-03-30 17:01:18.257636"], ["updated_at", "2018-03-30 17:01:18.257636"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Movies"], ["created_at", "2018-03-30 17:01:18.260047"], ["updated_at", "2018-03-30 17:01:18.260047"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Silk Hat"], ["inventory", "25"], ["price", 7894.0], ["created_at", "2018-03-30 17:01:18.262616"], ["updated_at", "2018-03-30 17:01:18.262616"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Grocery"], ["created_at", "2018-03-30 17:01:18.264877"], ["updated_at", "2018-03-30 17:01:18.264877"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Fantastic Plastic Car"], ["inventory", "24"], ["price", 2685.0], ["created_at", "2018-03-30 17:01:18.267365"], ["updated_at", "2018-03-30 17:01:18.267365"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Industrial & Health"], ["created_at", "2018-03-30 17:01:18.269851"], ["updated_at", "2018-03-30 17:01:18.269851"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Enormous Leather Clock"], ["inventory", "86"], ["price", 3815.0], ["created_at", "2018-03-30 17:01:18.322409"], ["updated_at", "2018-03-30 17:01:18.322409"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Computers, Sports & Toys"], ["created_at", "2018-03-30 17:01:18.324329"], ["updated_at", "2018-03-30 17:01:18.324329"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Copper Bench"], ["inventory", "38"], ["price", 7672.0], ["created_at", "2018-03-30 17:01:18.326213"], ["updated_at", "2018-03-30 17:01:18.326213"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden, Industrial & Computers"], ["created_at", "2018-03-30 17:01:18.327989"], ["updated_at", "2018-03-30 17:01:18.327989"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Synergistic Linen Pants"], ["inventory", "46"], ["price", 4950.0], ["created_at", "2018-03-30 17:01:18.330036"], ["updated_at", "2018-03-30 17:01:18.330036"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Health"], ["created_at", "2018-03-30 17:01:18.333039"], ["updated_at", "2018-03-30 17:01:18.333039"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Rustic Wool Coat"], ["inventory", "62"], ["price", 3648.0], ["created_at", "2018-03-30 17:01:18.335556"], ["updated_at", "2018-03-30 17:01:18.335556"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Kids & Tools"], ["created_at", "2018-03-30 17:01:18.337455"], ["updated_at", "2018-03-30 17:01:18.337455"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:18.339984"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:18.341917"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:18.343635"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:18.345557"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:18.347336"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:18.349189"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:18.351004"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:18.352709"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:18.354521"], ["id", 9]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:18.356145"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items"  ORDER BY "items"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-03-30 17:01:18.358223"], ["updated_at", "2018-03-30 17:01:18.358223"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 1], ["item_id", 1], ["created_at", "2018-03-30 17:01:18.361058"], ["updated_at", "2018-03-30 17:01:18.361058"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Rubber Hat"], ["inventory", "47"], ["price", 9747.0], ["created_at", "2018-03-30 17:01:18.369551"], ["updated_at", "2018-03-30 17:01:18.369551"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Shoes & Beauty"], ["created_at", "2018-03-30 17:01:18.371664"], ["updated_at", "2018-03-30 17:01:18.371664"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Copper Hat"], ["inventory", "37"], ["price", 2347.0], ["created_at", "2018-03-30 17:01:18.422168"], ["updated_at", "2018-03-30 17:01:18.422168"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Electronics"], ["created_at", "2018-03-30 17:01:18.424043"], ["updated_at", "2018-03-30 17:01:18.424043"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Intelligent Aluminum Shoes"], ["inventory", "13"], ["price", 8792.0], ["created_at", "2018-03-30 17:01:18.426450"], ["updated_at", "2018-03-30 17:01:18.426450"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books"], ["created_at", "2018-03-30 17:01:18.429259"], ["updated_at", "2018-03-30 17:01:18.429259"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Plastic Watch"], ["inventory", "21"], ["price", 3350.0], ["created_at", "2018-03-30 17:01:18.432398"], ["updated_at", "2018-03-30 17:01:18.432398"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Garden, Beauty & Kids"], ["created_at", "2018-03-30 17:01:18.435375"], ["updated_at", "2018-03-30 17:01:18.435375"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Linen Lamp"], ["inventory", "41"], ["price", 5804.0], ["created_at", "2018-03-30 17:01:18.438320"], ["updated_at", "2018-03-30 17:01:18.438320"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home & Automotive"], ["created_at", "2018-03-30 17:01:18.440920"], ["updated_at", "2018-03-30 17:01:18.440920"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Bronze Knife"], ["inventory", "87"], ["price", 8533.0], ["created_at", "2018-03-30 17:01:18.443759"], ["updated_at", "2018-03-30 17:01:18.443759"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Tools, Outdoors & Sports"], ["created_at", "2018-03-30 17:01:18.446517"], ["updated_at", "2018-03-30 17:01:18.446517"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Small Wooden Bench"], ["inventory", "57"], ["price", 1876.0], ["created_at", "2018-03-30 17:01:18.449349"], ["updated_at", "2018-03-30 17:01:18.449349"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Music, Kids & Beauty"], ["created_at", "2018-03-30 17:01:18.451929"], ["updated_at", "2018-03-30 17:01:18.451929"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Awesome Cotton Bench"], ["inventory", "31"], ["price", 5735.0], ["created_at", "2018-03-30 17:01:18.454482"], ["updated_at", "2018-03-30 17:01:18.454482"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Automotive"], ["created_at", "2018-03-30 17:01:18.456801"], ["updated_at", "2018-03-30 17:01:18.456801"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Synergistic Linen Computer"], ["inventory", "81"], ["price", 6552.0], ["created_at", "2018-03-30 17:01:18.459294"], ["updated_at", "2018-03-30 17:01:18.459294"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Tools & Electronics"], ["created_at", "2018-03-30 17:01:18.461766"], ["updated_at", "2018-03-30 17:01:18.461766"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Enormous Iron Coat"], ["inventory", "47"], ["price", 7778.0], ["created_at", "2018-03-30 17:01:18.464100"], ["updated_at", "2018-03-30 17:01:18.464100"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby & Beauty"], ["created_at", "2018-03-30 17:01:18.466400"], ["updated_at", "2018-03-30 17:01:18.466400"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:18.469529"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:18.471885"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:18.522648"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:18.524994"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:18.527117"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:18.529253"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:18.532624"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:18.535572"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:18.537753"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:18.539567"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aerodynamic Wooden Bag"], ["inventory", "94"], ["price", 7011.0], ["created_at", "2018-03-30 17:01:18.547777"], ["updated_at", "2018-03-30 17:01:18.547777"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books & Industrial"], ["created_at", "2018-03-30 17:01:18.549930"], ["updated_at", "2018-03-30 17:01:18.549930"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Incredible Plastic Shoes"], ["inventory", "67"], ["price", 3866.0], ["created_at", "2018-03-30 17:01:18.551947"], ["updated_at", "2018-03-30 17:01:18.551947"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Books & Shoes"], ["created_at", "2018-03-30 17:01:18.553799"], ["updated_at", "2018-03-30 17:01:18.553799"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Linen Car"], ["inventory", "56"], ["price", 8157.0], ["created_at", "2018-03-30 17:01:18.555689"], ["updated_at", "2018-03-30 17:01:18.555689"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Outdoors"], ["created_at", "2018-03-30 17:01:18.557594"], ["updated_at", "2018-03-30 17:01:18.557594"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Mediocre Copper Plate"], ["inventory", "13"], ["price", 1256.0], ["created_at", "2018-03-30 17:01:18.559399"], ["updated_at", "2018-03-30 17:01:18.559399"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Toys, Jewelery & Computers"], ["created_at", "2018-03-30 17:01:18.561217"], ["updated_at", "2018-03-30 17:01:18.561217"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Enormous Silk Shirt"], ["inventory", "88"], ["price", 2258.0], ["created_at", "2018-03-30 17:01:18.563072"], ["updated_at", "2018-03-30 17:01:18.563072"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Shoes"], ["created_at", "2018-03-30 17:01:18.564815"], ["updated_at", "2018-03-30 17:01:18.564815"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Linen Knife"], ["inventory", "84"], ["price", 1446.0], ["created_at", "2018-03-30 17:01:18.566780"], ["updated_at", "2018-03-30 17:01:18.566780"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby & Toys"], ["created_at", "2018-03-30 17:01:18.568533"], ["updated_at", "2018-03-30 17:01:18.568533"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Bronze Shoes"], ["inventory", "50"], ["price", 8703.0], ["created_at", "2018-03-30 17:01:18.570428"], ["updated_at", "2018-03-30 17:01:18.570428"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Baby"], ["created_at", "2018-03-30 17:01:18.572172"], ["updated_at", "2018-03-30 17:01:18.572172"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Heavy Duty Aluminum Shirt"], ["inventory", "99"], ["price", 6461.0], ["created_at", "2018-03-30 17:01:18.622293"], ["updated_at", "2018-03-30 17:01:18.622293"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Shoes, Clothing & Electronics"], ["created_at", "2018-03-30 17:01:18.624171"], ["updated_at", "2018-03-30 17:01:18.624171"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Durable Cotton Table"], ["inventory", "20"], ["price", 4148.0], ["created_at", "2018-03-30 17:01:18.626703"], ["updated_at", "2018-03-30 17:01:18.626703"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Games"], ["created_at", "2018-03-30 17:01:18.629668"], ["updated_at", "2018-03-30 17:01:18.629668"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sleek Aluminum Clock"], ["inventory", "41"], ["price", 1697.0], ["created_at", "2018-03-30 17:01:18.632886"], ["updated_at", "2018-03-30 17:01:18.632886"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Home, Automotive & Baby"], ["created_at", "2018-03-30 17:01:18.635873"], ["updated_at", "2018-03-30 17:01:18.635873"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 1"], ["category_id", 1], ["updated_at", "2018-03-30 17:01:18.639659"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 2"], ["category_id", 2], ["updated_at", "2018-03-30 17:01:18.642526"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 3"], ["category_id", 3], ["updated_at", "2018-03-30 17:01:18.645222"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 4"], ["category_id", 4], ["updated_at", "2018-03-30 17:01:18.647878"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 5"], ["category_id", 5], ["updated_at", "2018-03-30 17:01:18.650521"], ["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 6"], ["category_id", 6], ["updated_at", "2018-03-30 17:01:18.653062"], ["id", 6]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 7"], ["category_id", 7], ["updated_at", "2018-03-30 17:01:18.655580"], ["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 8"], ["category_id", 8], ["updated_at", "2018-03-30 17:01:18.658069"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?  [["description", "the description for item 9"], ["category_id", 9], ["updated_at", "2018-03-30 17:01:18.660537"], ["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "items" SET "description" = ?, "category_id" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["description", "the description for item 10"], ["category_id", 10], ["updated_at", "2018-03-30 17:01:18.662990"], ["id", 10]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction

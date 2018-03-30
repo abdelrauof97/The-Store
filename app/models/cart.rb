@@ -20,8 +20,4 @@ class Cart < ActiveRecord::Base
     end
   end
 
-  def available_items
-    Item.where("inventory >= 1")
-  end
-
 end
