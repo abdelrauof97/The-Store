@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2'
-gem 'sass-rails', '4.0.2'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'rails'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'devise'
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'jbuilder'
+gem 'sdoc',       group: :doc
 
 group :test, :development do
   gem "rspec-rails"
@@ -26,6 +26,6 @@ group :test, :development do
   gem "thin"
 end
 
-gem "bootstrap-sass", "~> 3.1.1"
+gem "bootstrap-sass"
 gem "faker"
 gem "friendly_id"
