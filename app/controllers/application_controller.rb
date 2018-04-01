@@ -4,8 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def current_cart
-    current_user.current_cart || current_user.create_current_card
+    current_user.current_cart || current_user.create_current_card if current_user
   end
+
   helper_method :current_cart
 
 end
